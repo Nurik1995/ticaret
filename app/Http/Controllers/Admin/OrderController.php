@@ -53,6 +53,7 @@ class OrderController extends Controller
         $order->amount = $request->amount;
         $order->discount = 0;
         $order->status = 1;
+
         if ($order->save()) {
             $transactions = new Transaction();
             $transactions->order_id = $order->id;

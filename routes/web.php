@@ -101,6 +101,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 Route::get('/checkout_google', [OrderController::class, 'checkout']);
 Route::post('/payment', [OrderController::class, 'payment']);
 
-
 Route::get('file', [FileController::class, 'create']);
 Route::post('file', [FileController::class, 'store']);
